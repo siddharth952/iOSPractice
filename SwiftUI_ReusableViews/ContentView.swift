@@ -9,8 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack(spacing: 20){
+            MainButtonView(title: "Got it",type: .primary(withArrow: true)) {
+                print("Got it!!")
+            }
+            MainButtonView(title: "Clear All",type: .secondary(withArrow: true)) {
+                print("yes cleared")
+            }
+            MainButtonView(title: "Cancel", type: .destructive(withArrow: false)) {
+                print("Cancel!!")
+            }
+        }
+        .padding(20)
+        .background(Color.backgroundColor)
     }
 } 
 
